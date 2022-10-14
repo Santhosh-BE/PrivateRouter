@@ -5,6 +5,7 @@ import Profile from './Pages/Profile';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import Protected from './Protected';
+import Verification from './Pages/Verification';
 function App() {
   const [islogged, setIsLogged] = useState(false);
   return (
@@ -18,6 +19,9 @@ function App() {
             <Link to="/Dashboard">About</Link>
           </li>
           <li>
+            <Link to="/Verification">Verification</Link>
+          </li>
+          <li>
             <Link to="/Profile">Profile</Link>
           </li>
           <li className='right'>
@@ -28,6 +32,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='Dashboard' element={<Dashboard />} />
+          <Route path='Verification' element={<Verification />} />
           <Route element={<Protected isLogged={islogged} />}>
             <Route path='Profile' element={<Profile />} />
           </Route>
