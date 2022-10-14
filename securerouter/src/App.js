@@ -20,8 +20,10 @@ function App() {
           <li>
             <Link to="/Profile">Profile</Link>
           </li>
+          <li className='right'>
           <button className='button1' onClick={() => setIsLogged(true)}>Login</button>
       <button className='button2' onClick={() => setIsLogged(false)}>Logout</button>
+      </li>
         </ul>
         <Routes>
           <Route path='/' element={<Home />} />
